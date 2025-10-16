@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shows - RecordFM 97.7</title>
+    <!-- Tailwind CSS CDN for quick setup -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dqecbyedf/image/upload/v1760594567/record_fm_ynmyda.png">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.01em;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .professional-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .hover-lift:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-black text-white font-sans antialiased">
+
+    <div class="container mx-auto px-6">
+        <!-- Navigation Bar -->
+        <header class="py-8 border-b border-gray-800">
+            <nav class="flex items-center justify-between">
+                <!-- Left: Logo -->
+                <div class="flex-1 flex justify-start">
+                    <a href="index.html" class="flex items-center gap-3 group">
+                        <div class="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center group-hover:bg-red-700 transition-colors">
+                            <img src="https://res.cloudinary.com/dqecbyedf/image/upload/v1760594567/record_fm_ynmyda.png" alt="RecordFM 97.7 Logo" class="w-6 h-6">
+                        </div>
+                        <div>
+                            <span class="text-2xl font-bold text-white">RecordFM 97.7</span>
+                            <p class="text-xs text-zinc-400 -mt-1">Your Voice, Your Station</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Center: Navigation Links -->
+                <div>
+                    <ul class="hidden lg:flex items-center gap-10 text-zinc-300">
+                        <li><a href="index.html" class="font-medium hover:text-white hover:border-b-2 hover:border-red-500 pb-1 transition-all duration-300">Home</a></li>
+                        <li><a href="news.html" class="font-medium hover:text-white hover:border-b-2 hover:border-red-500 pb-1 transition-all duration-300">News</a></li>
+                        <li><a href="shows.html" class="font-medium text-red-500 border-b-2 border-red-500 pb-1">Shows</a></li>
+                        <li><a href="schedule.html" class="font-medium hover:text-white hover:border-b-2 hover:border-red-500 pb-1 transition-all duration-300">Schedule</a></li>
+                    </ul>
+                </div>
+
+                <!-- Right: Contact Button -->
+                <div class="flex-1 flex justify-end">
+                    <a href="contact.html" class="bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-3 rounded-xl font-semibold hover:from-red-700 hover:to-red-800 transition-all duration-300 professional-shadow hover-lift">
+                        <i class="fas fa-phone mr-2"></i>Contact Us
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Shows Content -->
+        <main class="py-16">
+            <div class="max-w-6xl mx-auto">
+                <!-- Page Header -->
+                <div class="text-center mb-16">
+                    <h1 class="text-5xl font-black text-white mb-6">Our Shows</h1>
+                    <p class="text-xl text-zinc-300 max-w-3xl mx-auto">Discover our diverse lineup of programs featuring news, music, talk shows, and community content</p>
+                </div>
+
+                <!-- Shows Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    <!-- Morning Drive -->
+                    <div class="group hover-lift">
+                        <div class="bg-zinc-900 rounded-2xl overflow-hidden professional-shadow">
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=400&h=250&auto=format&fit=crop" alt="Morning Drive" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute top-4 left-4">
+                                    <span class="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-bold">
+                                        <i class="fas fa-microphone mr-1"></i>Live Now
+                                    </span>
+                                </div>
+                                <div class="absolute bottom-4 right-4">
+                                    <span class="bg-black/75 text-white px-3 py-1 rounded-full text-sm font-bold">6:00 AM - 10:00 AM</span>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-red-400 transition-colors">Morning Drive</h3>
+                                <p class="text-red-500 font-semibold mb-3">Hosted by Sarah Johnson</p>
+                                <p class="text-zinc-400 mb-4">Start your day with the latest news, weather, and traffic updates. Featuring local interviews and community spotlights.</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm text-zinc-500">Weekdays</span>
+                                    <button class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors">
+                                        <i class="fas fa-play mr-2"></i>Listen Live
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Afternoon Talk -->
+                    <div class="group hover-lift">
+                        <div class="bg-zinc-900 rounded-2xl overflow-hidden professional-shadow">
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=400&h=250&auto=format&fit=crop" alt="Afternoon Talk" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute top-4 left-4">
+                                    <span class="bg-zinc-600 text-white px-3 py-1 rounded-full text-sm font-bold">
+                                        <i class="fas fa-clock mr-1"></i>2:00 PM
+                                    </span>
+                                </div>
+                                <div class="absolute bottom-4 right-4">
+                                    <span class="bg-black/75 text-white px-3 py-1 rounded-full text-sm font-bold">2:00 PM - 6:00 PM</span>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-red-400 transition-colors">Afternoon Talk</h3>
+                                <p class="text-red-500 font-semibold mb-3">Hosted by Mike Rodriguez</p>
+                                <p class="text-zinc-400 mb-4">Engaging conversations about current events, politics, and community issues. Call in and share your thoughts.</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm text-zinc-500">Weekdays</span>
+                                    <button class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors">
+                                        <i class="fas fa-play mr-2"></i>Listen Live
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Evening News -->
+                    <div class="group hover-lift">
+                        <div class="bg-zinc-900 rounded-2xl overflow-hidden professional-shadow">
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=400&h=250&auto=format&fit=crop" alt="Evening News" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute top-4 left-4">
+                                    <span class="bg-zinc-600 text-white px-3 py-1 rounded-full text-sm font-bold">
+                                        <i class="fas fa-clock mr-1"></i>6:00 PM
+                                    </span>
+                                </div>
+                                <div class="absolute bottom-4 right-4">
+                                    <span class="bg-black/75 text-white px-3 py-1 rounded-full text-sm font-bold">6:00 PM - 10:00 PM</span>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-red-400 transition-colors">Evening News</h3>
+                                <p class="text-red-500 font-semibold mb-3">Hosted by Emma Davis</p>
+                                <p class="text-zinc-400 mb-4">Comprehensive news coverage with in-depth reporting on local, national, and international stories.</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm text-zinc-500">Weekdays</span>
+                                    <button class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors">
+                                        <i class="fas fa-play mr-2"></i>Listen Live
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Night Music -->
+                    <div class="group hover-lift">
+                        <div class="bg-zinc-900 rounded-2xl overflow-hidden professional-shadow">
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=400&h=250&auto=format&fit=crop" alt="Night Music" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute top-4 left-4">
+                                    <span class="bg-zinc-600 text-white px-3 py-1 rounded-full text-sm font-bold">
+                                        <i class="fas fa-clock mr-1"></i>10:00 PM
+                                    </span>
+                                </div>
+                                <div class="absolute bottom-4 right-4">
+                                    <span class="bg-black/75 text-white px-3 py-1 rounded-full text-sm font-bold">10:00 PM - 2:00 AM</span>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-red-400 transition-colors">Night Music</h3>
+                                <p class="text-red-500 font-semibold mb-3">Hosted by David Chen</p>
+                                <p class="text-zinc-400 mb-4">The best music to end your day. Featuring new releases, classic hits, and listener requests.</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm text-zinc-500">Daily</span>
+                                    <button class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors">
+                                        <i class="fas fa-play mr-2"></i>Listen Live
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Weekend Special -->
+                    <div class="group hover-lift">
+                        <div class="bg-zinc-900 rounded-2xl overflow-hidden professional-shadow">
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1515405295579-ba7b45403062?q=80&w=400&h=250&auto=format&fit=crop" alt="Weekend Special" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute top-4 left-4">
+                                    <span class="bg-zinc-600 text-white px-3 py-1 rounded-full text-sm font-bold">
+                                        <i class="fas fa-calendar mr-1"></i>Weekends
+                                    </span>
+                                </div>
+                                <div class="absolute bottom-4 right-4">
+                                    <span class="bg-black/75 text-white px-3 py-1 rounded-full text-sm font-bold">Saturdays & Sundays</span>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-red-400 transition-colors">Weekend Special</h3>
+                                <p class="text-red-500 font-semibold mb-3">Various Hosts</p>
+                                <p class="text-zinc-400 mb-4">Special programming featuring interviews, documentaries, and unique content perfect for weekend listening.</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm text-zinc-500">Weekends</span>
+                                    <button class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors">
+                                        <i class="fas fa-play mr-2"></i>Listen Live
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sports Hour -->
+                    <div class="group hover-lift">
+                        <div class="bg-zinc-900 rounded-2xl overflow-hidden professional-shadow">
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=400&h=250&auto=format&fit=crop" alt="Sports Hour" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute top-4 left-4">
+                                    <span class="bg-zinc-600 text-white px-3 py-1 rounded-full text-sm font-bold">
+                                        <i class="fas fa-clock mr-1"></i>12:00 PM
+                                    </span>
+                                </div>
+                                <div class="absolute bottom-4 right-4">
+                                    <span class="bg-black/75 text-white px-3 py-1 rounded-full text-sm font-bold">Weekdays 12:00 PM</span>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-red-400 transition-colors">Sports Hour</h3>
+                                <p class="text-red-500 font-semibold mb-3">Sports Team</p>
+                                <p class="text-zinc-400 mb-4">Comprehensive sports coverage including local teams, scores, highlights, and expert analysis.</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm text-zinc-500">Weekdays</span>
+                                    <button class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors">
+                                        <i class="fas fa-play mr-2"></i>Listen Live
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Show Categories -->
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-white mb-8">Show Categories</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="group hover-lift">
+                            <div class="bg-zinc-900 rounded-2xl p-8 text-center professional-shadow">
+                                <div class="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-red-700 transition-colors">
+                                    <i class="fas fa-microphone text-3xl text-white"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-white mb-4">Talk Shows</h3>
+                                <p class="text-zinc-400 mb-6">Engaging conversations and discussions on current events, politics, and community issues.</p>
+                                <div class="text-sm text-zinc-500">4 Shows</div>
+                            </div>
+                        </div>
+
+                        <div class="group hover-lift">
+                            <div class="bg-zinc-900 rounded-2xl p-8 text-center professional-shadow">
+                                <div class="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-red-700 transition-colors">
+                                    <i class="fas fa-music text-3xl text-white"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-white mb-4">Music Shows</h3>
+                                <p class="text-zinc-400 mb-6">The best music programming featuring new releases, classic hits, and special themed shows.</p>
+                                <div class="text-sm text-zinc-500">3 Shows</div>
+                            </div>
+                        </div>
+
+                        <div class="group hover-lift">
+                            <div class="bg-zinc-900 rounded-2xl p-8 text-center professional-shadow">
+                                <div class="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-red-700 transition-colors">
+                                    <i class="fas fa-newspaper text-3xl text-white"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-white mb-4">News Programs</h3>
+                                <p class="text-zinc-400 mb-6">Comprehensive news coverage with breaking updates, in-depth reporting, and analysis.</p>
+                                <div class="text-sm text-zinc-500">2 Shows</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-900 text-white">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="text-center">
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <img src="https://res.cloudinary.com/dqecbyedf/image/upload/v1760594567/record_fm_ynmyda.png" alt="RecordFM 97.7 Logo" class="w-8 h-8">
+                    <span class="text-xl font-bold">RecordFM 97.7</span>
+                </div>
+                <p class="text-zinc-400 text-sm">© 2024 RecordFM 97.7. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

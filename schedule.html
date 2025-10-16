@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule - RecordFM 97.7</title>
+    <!-- Tailwind CSS CDN for quick setup -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dqecbyedf/image/upload/v1760594567/record_fm_ynmyda.png">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.01em;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .professional-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .hover-lift:hover {
+            transform: translateY(-2px);
+        }
+        .current-time {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+        }
+    </style>
+</head>
+<body class="bg-black text-white font-sans antialiased">
+
+    <div class="container mx-auto px-6">
+        <!-- Navigation Bar -->
+        <header class="py-8 border-b border-gray-800">
+            <nav class="flex items-center justify-between">
+                <!-- Left: Logo -->
+                <div class="flex-1 flex justify-start">
+                    <a href="index.html" class="flex items-center gap-3 group">
+                        <div class="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center group-hover:bg-red-700 transition-colors">
+                            <img src="https://res.cloudinary.com/dqecbyedf/image/upload/v1760594567/record_fm_ynmyda.png" alt="RecordFM 97.7 Logo" class="w-6 h-6">
+                        </div>
+                        <div>
+                            <span class="text-2xl font-bold text-white">RecordFM 97.7</span>
+                            <p class="text-xs text-zinc-400 -mt-1">Your Voice, Your Station</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Center: Navigation Links -->
+                <div>
+                    <ul class="hidden lg:flex items-center gap-10 text-zinc-300">
+                        <li><a href="index.html" class="font-medium hover:text-white hover:border-b-2 hover:border-red-500 pb-1 transition-all duration-300">Home</a></li>
+                        <li><a href="news.html" class="font-medium hover:text-white hover:border-b-2 hover:border-red-500 pb-1 transition-all duration-300">News</a></li>
+                        <li><a href="shows.html" class="font-medium hover:text-white hover:border-b-2 hover:border-red-500 pb-1 transition-all duration-300">Shows</a></li>
+                        <li><a href="schedule.html" class="font-medium text-red-500 border-b-2 border-red-500 pb-1">Schedule</a></li>
+                    </ul>
+                </div>
+
+                <!-- Right: Contact Button -->
+                <div class="flex-1 flex justify-end">
+                    <a href="contact.html" class="bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-3 rounded-xl font-semibold hover:from-red-700 hover:to-red-800 transition-all duration-300 professional-shadow hover-lift">
+                        <i class="fas fa-phone mr-2"></i>Contact Us
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Schedule Content -->
+        <main class="py-16">
+            <div class="max-w-6xl mx-auto">
+                <!-- Page Header -->
+                <div class="text-center mb-16">
+                    <h1 class="text-5xl font-black text-white mb-6">Program Schedule</h1>
+                    <p class="text-xl text-zinc-300 max-w-3xl mx-auto">Plan your listening with our complete weekly programming schedule</p>
+                </div>
+
+                <!-- Current Time Display -->
+                <div class="bg-zinc-900 rounded-2xl p-8 mb-12 text-center professional-shadow">
+                    <h2 class="text-2xl font-bold text-white mb-4">Currently On Air</h2>
+                    <div class="current-time text-white px-6 py-3 rounded-xl inline-block">
+                        <i class="fas fa-microphone mr-2"></i>
+                        <span class="text-lg font-semibold">Morning Drive with Sarah Johnson</span>
+                    </div>
+                    <p class="text-zinc-400 mt-4">6:00 AM - 10:00 AM • Weekdays</p>
+                </div>
+
+                <!-- Schedule Tabs -->
+                <div class="mb-8">
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <button class="bg-red-600 text-white px-6 py-3 rounded-xl font-semibold">
+                            <i class="fas fa-calendar-day mr-2"></i>Today
+                        </button>
+                        <button class="bg-zinc-800 text-zinc-300 px-6 py-3 rounded-xl font-semibold hover:bg-zinc-700 transition-colors">
+                            <i class="fas fa-calendar-week mr-2"></i>This Week
+                        </button>
+                        <button class="bg-zinc-800 text-zinc-300 px-6 py-3 rounded-xl font-semibold hover:bg-zinc-700 transition-colors">
+                            <i class="fas fa-calendar mr-2"></i>Full Schedule
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Today's Schedule -->
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold text-white mb-8">Today's Schedule - December 15, 2024</h2>
+                    
+                    <div class="space-y-4">
+                        <!-- Morning Drive -->
+                        <div class="bg-zinc-900 rounded-2xl p-6 professional-shadow hover-lift">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-6">
+                                    <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-microphone text-2xl text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-white">Morning Drive</h3>
+                                        <p class="text-red-500 font-semibold">Sarah Johnson</p>
+                                        <p class="text-zinc-400">Start your day with news, weather, and community updates</p>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-2xl font-bold text-white">6:00 AM - 10:00 AM</div>
+                                    <div class="text-red-500 font-semibold">LIVE NOW</div>
+                                    <button class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors mt-2">
+                                        <i class="fas fa-play mr-2"></i>Listen
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sports Hour -->
+                        <div class="bg-zinc-900 rounded-2xl p-6 professional-shadow hover-lift">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-6">
+                                    <div class="w-16 h-16 bg-zinc-700 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-futbol text-2xl text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-white">Sports Hour</h3>
+                                        <p class="text-red-500 font-semibold">Sports Team</p>
+                                        <p class="text-zinc-400">Local and national sports coverage with expert analysis</p>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-2xl font-bold text-white">12:00 PM - 1:00 PM</div>
+                                    <div class="text-zinc-500 font-semibold">Upcoming</div>
+                                    <button class="bg-zinc-700 text-white px-4 py-2 rounded-lg hover:bg-zinc-600 transition-colors mt-2">
+                                        <i class="fas fa-clock mr-2"></i>Set Reminder
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Afternoon Talk -->
+                        <div class="bg-zinc-900 rounded-2xl p-6 professional-shadow hover-lift">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-6">
+                                    <div class="w-16 h-16 bg-zinc-700 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-comments text-2xl text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-white">Afternoon Talk</h3>
+                                        <p class="text-red-500 font-semibold">Mike Rodriguez</p>
+                                        <p class="text-zinc-400">Engaging conversations about current events and community issues</p>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-2xl font-bold text-white">2:00 PM - 6:00 PM</div>
+                                    <div class="text-zinc-500 font-semibold">Upcoming</div>
+                                    <button class="bg-zinc-700 text-white px-4 py-2 rounded-lg hover:bg-zinc-600 transition-colors mt-2">
+                                        <i class="fas fa-clock mr-2"></i>Set Reminder
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Evening News -->
+                        <div class="bg-zinc-900 rounded-2xl p-6 professional-shadow hover-lift">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-6">
+                                    <div class="w-16 h-16 bg-zinc-700 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-newspaper text-2xl text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-white">Evening News</h3>
+                                        <p class="text-red-500 font-semibold">Emma Davis</p>
+                                        <p class="text-zinc-400">Comprehensive news coverage with in-depth reporting</p>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-2xl font-bold text-white">6:00 PM - 10:00 PM</div>
+                                    <div class="text-zinc-500 font-semibold">Upcoming</div>
+                                    <button class="bg-zinc-700 text-white px-4 py-2 rounded-lg hover:bg-zinc-600 transition-colors mt-2">
+                                        <i class="fas fa-clock mr-2"></i>Set Reminder
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Night Music -->
+                        <div class="bg-zinc-900 rounded-2xl p-6 professional-shadow hover-lift">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-6">
+                                    <div class="w-16 h-16 bg-zinc-700 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-music text-2xl text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-white">Night Music</h3>
+                                        <p class="text-red-500 font-semibold">David Chen</p>
+                                        <p class="text-zinc-400">The best music to end your day with new releases and classics</p>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-2xl font-bold text-white">10:00 PM - 2:00 AM</div>
+                                    <div class="text-zinc-500 font-semibold">Upcoming</div>
+                                    <button class="bg-zinc-700 text-white px-4 py-2 rounded-lg hover:bg-zinc-600 transition-colors mt-2">
+                                        <i class="fas fa-clock mr-2"></i>Set Reminder
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Weekly Overview -->
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold text-white mb-8">Weekly Overview</h2>
+                    <div class="bg-zinc-900 rounded-2xl p-8 professional-shadow">
+                        <div class="grid grid-cols-1 md:grid-cols-7 gap-4">
+                            <!-- Monday -->
+                            <div class="text-center">
+                                <h3 class="text-lg font-bold text-white mb-4">Monday</h3>
+                                <div class="space-y-2">
+                                    <div class="bg-zinc-800 rounded-lg p-2">
+                                        <div class="text-sm font-semibold text-red-500">6:00 AM</div>
+                                        <div class="text-xs text-zinc-400">Morning Drive</div>
+                                    </div>
+                                    <div class="bg-zinc-800 rounded-lg p-2">
+                                        <div class="text-sm font-semibold text-red-500">12:00 PM</div>
+                                        <div class="text-xs text-zinc-400">Sports Hour</div>
+                                    </div>
+                                    <div class="bg-zinc-800 rounded-lg p-2">
+                                        <div class="text-sm font-semibold text-red-500">2:00 PM</div>
+                                        <div class="text-xs text-zinc-400">Afternoon Talk</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tuesday -->
+                            <div class="text-center">
+                                <h3 class="text-lg font-bold text-white mb-4">Tuesday</h3>
+                                <div class="space-y-2">
+                                    <div class="bg-zinc-800 rounded-lg p-2">
+                                        <div class="text-sm font-semibold text-red-500">6:00 AM</div>
+                                        <div class="text-xs text-zinc-400">Morning Drive</div>
+                                    </div>
+                                    <div class="bg-zinc-800 rounded-lg p-2">
+                                        <div class="text-sm font-semibold text-red-500">12:00 PM</div>
+                                        <div class="text-xs text-zinc-400">Sports Hour</div>
+                                    </div>
+                                    <div class="bg-zinc-800 rounded-lg p-2">
+                                        <div class="text-sm font-semibold text-red-500">2:00 PM</div>
+                                        <div class="text-xs text-zinc-400">Afternoon Talk</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Wednesday -->
+                            <div class="text-center">
+                                <h3 class="text-lg font-bold text-white mb-4">Wednesday</h3>
+                                <div class="space-y-2">
+                                    <div class="bg-zinc-800 rounded-lg p-2">
+                                        <div class="text-sm font-semibold text-red-500">6:00 AM</div>
+                                        <div class="text-xs text-zinc-400">Morning Drive</div>
+                                    </div>
+                                    <div class="bg-zinc-800 rounded-lg p-2">
+                                        <div class="text-sm font-semibold text-red-500">12:00 PM</div>
+                                        <div class="text-xs text-zinc-400">Sports Hour</div>
+                                    </div>
+                                    <div class="bg-zinc-800 rounded-lg p-2">
+                                        <div class="text-sm font-semibold text-red-500">2:00 PM</div>
+                                        <div class="text-xs text-zinc-400">Afternoon Talk</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Thursday -->
+                            <div class="text-center">
+                                <h3 class="text-lg font-bold text-white mb-4">Thursday</h3>
+                                <div class="space-y-2">
+                                    <div class="bg-zinc-800 rounded-lg p-2">
+                                        <div class="text-sm font-semibold text-red-500">6:00 AM</div>
+                                        <div class="text-xs text-zinc-400">Morning Drive</div>
+                                    </div>
+                                    <div class="bg-zinc-800 rounded-lg p-2">
+                                        <div class="text-sm font-semibold text-red-500">12:00 PM</div>
+                                        <div class="text-xs text-zinc-400">Sports Hour</div>
+                                    </div>
+                                    <div class="bg-zinc-800 rounded-lg p-2">
+                                        <div class="text-sm font-semibold text-red-500">2:00 PM</div>
+                                        <div class="text-xs text-zinc-400">Afternoon Talk</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Friday -->
+                            <div class="text-center">
+                                <h3 class="text-lg font-bold text-white mb-4">Friday</h3>
+                                <div class="space-y-2">
+                                    <div class="bg-zinc-800 rounded-lg p-2">
+                                        <div class="text-sm font-semibold text-red-500">6:00 AM</div>
+                                        <div class="text-xs text-zinc-400">Morning Drive</div>
+                                    </div>
+                                    <div class="bg-zinc-800 rounded-lg p-2">
+                                        <div class="text-sm font-semibold text-red-500">12:00 PM</div>
+                                        <div class="text-xs text-zinc-400">Sports Hour</div>
+                                    </div>
+                                    <div class="bg-zinc-800 rounded-lg p-2">
+                                        <div class="text-sm font-semibold text-red-500">2:00 PM</div>
+                                        <div class="text-xs text-zinc-400">Afternoon Talk</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Saturday -->
+                            <div class="text-center">
+                                <h3 class="text-lg font-bold text-white mb-4">Saturday</h3>
+                                <div class="space-y-2">
+                                    <div class="bg-zinc-800 rounded-lg p-2">
+                                        <div class="text-sm font-semibold text-red-500">10:00 AM</div>
+                                        <div class="text-xs text-zinc-400">Weekend Special</div>
+                                    </div>
+                                    <div class="bg-zinc-800 rounded-lg p-2">
+                                        <div class="text-sm font-semibold text-red-500">2:00 PM</div>
+                                        <div class="text-xs text-zinc-400">Community Focus</div>
+                                    </div>
+                                    <div class="bg-zinc-800 rounded-lg p-2">
+                                        <div class="text-sm font-semibold text-red-500">6:00 PM</div>
+                                        <div class="text-xs text-zinc-400">Evening News</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sunday -->
+                            <div class="text-center">
+                                <h3 class="text-lg font-bold text-white mb-4">Sunday</h3>
+                                <div class="space-y-2">
+                                    <div class="bg-zinc-800 rounded-lg p-2">
+                                        <div class="text-sm font-semibold text-red-500">10:00 AM</div>
+                                        <div class="text-xs text-zinc-400">Weekend Special</div>
+                                    </div>
+                                    <div class="bg-zinc-800 rounded-lg p-2">
+                                        <div class="text-sm font-semibold text-red-500">2:00 PM</div>
+                                        <div class="text-xs text-zinc-400">Community Focus</div>
+                                    </div>
+                                    <div class="bg-zinc-800 rounded-lg p-2">
+                                        <div class="text-sm font-semibold text-red-500">6:00 PM</div>
+                                        <div class="text-xs text-zinc-400">Evening News</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-900 text-white">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="text-center">
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <img src="https://res.cloudinary.com/dqecbyedf/image/upload/v1760594567/record_fm_ynmyda.png" alt="RecordFM 97.7 Logo" class="w-8 h-8">
+                    <span class="text-xl font-bold">RecordFM 97.7</span>
+                </div>
+                <p class="text-zinc-400 text-sm">© 2024 RecordFM 97.7. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

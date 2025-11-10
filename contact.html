@@ -34,30 +34,91 @@
         .hover-lift:hover {
             transform: translateY(-2px);
         }
+        .hero-aurora {
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-aurora::before,
+        .hero-aurora::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 20% 20%, rgba(239, 68, 68, 0.25), transparent 55%),
+                        radial-gradient(circle at 80% 25%, rgba(244, 114, 182, 0.12), transparent 60%),
+                        radial-gradient(circle at 50% 85%, rgba(59, 130, 246, 0.15), transparent 65%);
+            opacity: 0.7;
+            animation: aurora 12s infinite alternate ease-in-out;
+            pointer-events: none;
+        }
+        .hero-aurora::after {
+            animation-direction: alternate-reverse;
+            filter: blur(40px);
+            opacity: 0.5;
+        }
+        @keyframes aurora {
+            0% { transform: translateY(-8%) scale(1); }
+            50% { transform: translateY(8%) scale(1.06); }
+            100% { transform: translateY(-5%) scale(1.02); }
+        }
+        .floating-shape {
+            position: absolute;
+            border: 1px solid rgba(239, 68, 68, 0.25);
+            border-radius: 9999px;
+            opacity: 0.7;
+            filter: drop-shadow(0 0 20px rgba(239, 68, 68, 0.25));
+            animation: float 8s ease-in-out infinite;
+            pointer-events: none;
+        }
+        .floating-shape:nth-child(2) { animation-delay: -2s; }
+        .floating-shape:nth-child(3) { animation-delay: -4s; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); }
+            50% { transform: translateY(-15px) translateX(10px); }
+        }
+        .section-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.25);
+            color: rgba(248, 250, 252, 0.9);
+            font-size: 0.85rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
     </style>
 </head>
 <body class="bg-black text-white font-sans antialiased">
 
-    <div class="container mx-auto px-6">
+    <div class="container mx-auto px-4 sm:px-6">
         <!-- Navigation Bar -->
-        <header class="py-8 border-b border-gray-800">
+        <header class="py-4 lg:py-8 border-b border-gray-800">
             <nav class="flex items-center justify-between">
                 <!-- Left: Logo -->
                 <div class="flex-1 flex justify-start">
-                    <a href="index.html" class="flex items-center gap-3 group">
-                        <div class="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center group-hover:bg-red-700 transition-colors">
-                            <img src="https://res.cloudinary.com/dqecbyedf/image/upload/v1760594567/record_fm_ynmyda.png" alt="RecordFM 97.7 Logo" class="w-6 h-6">
+                    <a href="index.html" class="flex items-center gap-2 lg:gap-3 group">
+                        <div class="w-8 h-8 lg:w-10 lg:h-10 bg-red-600 rounded-lg flex items-center justify-center group-hover:bg-red-700 transition-colors">
+                            <img src="https://res.cloudinary.com/dqecbyedf/image/upload/v1760594567/record_fm_ynmyda.png" alt="RecordFM 97.7 Logo" class="w-4 h-4 lg:w-6 lg:h-6">
                         </div>
                         <div>
-                            <span class="text-2xl font-bold text-white">RecordFM 97.7</span>
-                            <p class="text-xs text-zinc-400 -mt-1">Your Voice, Your Station</p>
+                            <span class="text-lg lg:text-2xl font-bold text-white">RecordFM 97.7</span>
+                            <p class="text-xs text-zinc-400 -mt-1 hidden sm:block">Your Voice, Your Station</p>
                         </div>
                     </a>
                 </div>
                 
-                <!-- Center: Navigation Links -->
-                <div>
-                    <ul class="hidden lg:flex items-center gap-10 text-zinc-300">
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-button" class="text-white hover:text-red-500 transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <div class="hidden lg:block">
+                    <ul class="flex items-center gap-10 text-zinc-300">
                         <li><a href="index.html" class="font-medium hover:text-white hover:border-b-2 hover:border-red-500 pb-1 transition-all duration-300">Home</a></li>
                         <li><a href="news.html" class="font-medium hover:text-white hover:border-b-2 hover:border-red-500 pb-1 transition-all duration-300">News</a></li>
                         <li><a href="shows.html" class="font-medium hover:text-white hover:border-b-2 hover:border-red-500 pb-1 transition-all duration-300">Shows</a></li>
@@ -66,21 +127,40 @@
                 </div>
 
                 <!-- Right: Contact Button -->
-                <div class="flex-1 flex justify-end">
+                <div class="hidden lg:flex flex-1 justify-end">
                     <a href="contact.html" class="bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-3 rounded-xl font-semibold hover:from-red-700 hover:to-red-800 transition-all duration-300 professional-shadow hover-lift">
                         <i class="fas fa-phone mr-2"></i>Contact Us
                     </a>
                 </div>
             </nav>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="lg:hidden hidden mt-4 pb-4">
+                <ul class="space-y-3">
+                    <li><a href="index.html" class="block text-zinc-300 hover:text-white font-medium py-2 border-b border-gray-700">Home</a></li>
+                    <li><a href="news.html" class="block text-zinc-300 hover:text-white font-medium py-2 border-b border-gray-700">News</a></li>
+                    <li><a href="shows.html" class="block text-zinc-300 hover:text-white font-medium py-2 border-b border-gray-700">Shows</a></li>
+                    <li><a href="schedule.html" class="block text-zinc-300 hover:text-white font-medium py-2 border-b border-gray-700">Schedule</a></li>
+                    <li><a href="contact.html" class="block text-white font-medium py-2 border-b border-gray-700">Contact</a></li>
+                </ul>
+            </div>
         </header>
 
         <!-- Contact Content -->
-        <main class="py-16">
-            <div class="max-w-6xl mx-auto">
+        <main class="py-8 lg:py-16">
+            <div class="max-w-6xl mx-auto px-4">
                 <!-- Page Header -->
-                <div class="text-center mb-16">
-                    <h1 class="text-5xl font-black text-white mb-6">Contact Us</h1>
-                    <p class="text-xl text-zinc-300 max-w-3xl mx-auto">Get in touch with RecordFM 97.7. We'd love to hear from you!</p>
+                <div class="hero-aurora rounded-3xl border border-white/5 bg-gradient-to-br from-white/5 via-transparent to-white/5 overflow-hidden mb-12 lg:mb-16">
+                    <span class="floating-shape hidden md:block w-32 h-32 -top-8 -left-5"></span>
+                    <span class="floating-shape hidden md:block w-24 h-24 top-14 -right-3"></span>
+                    <div class="relative z-10 px-6 sm:px-12 py-10 lg:py-14 text-center">
+                        <div class="section-pill mx-auto mb-6">
+                            <i class="fas fa-sparkles text-red-400"></i>
+                            Say Hello
+                        </div>
+                        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-4 lg:mb-6">Contact Us</h1>
+                        <p class="text-lg lg:text-xl text-zinc-300 max-w-3xl mx-auto">Get in touch with RecordFM 97.7. We'd love to hear from you!</p>
+                    </div>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -410,6 +490,26 @@
             </div>
         </div>
     </footer>
+
+    <!-- Mobile Menu JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (mobileMenu.classList.contains('hidden')) {
+                        icon.className = 'fas fa-bars text-xl';
+                    } else {
+                        icon.className = 'fas fa-times text-xl';
+                    }
+                });
+            }
+        });
+    </script>
 
 </body>
 </html>

@@ -41,81 +41,6 @@
         .hover-lift:hover {
             transform: translateY(-2px);
         }
-        .hero-aurora {
-            position: relative;
-            overflow: hidden;
-        }
-        .hero-aurora::before,
-        .hero-aurora::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at 20% 20%, rgba(239, 68, 68, 0.25), transparent 55%),
-                        radial-gradient(circle at 80% 30%, rgba(244, 114, 182, 0.12), transparent 60%),
-                        radial-gradient(circle at 50% 80%, rgba(59, 130, 246, 0.15), transparent 65%);
-            opacity: 0.7;
-            animation: aurora 12s infinite alternate ease-in-out;
-            pointer-events: none;
-        }
-        .hero-aurora::after {
-            animation-direction: alternate-reverse;
-            filter: blur(40px);
-            opacity: 0.5;
-        }
-        @keyframes aurora {
-            0% { transform: translateY(-10%) scale(1); }
-            50% { transform: translateY(10%) scale(1.05); }
-            100% { transform: translateY(-5%) scale(1.02); }
-        }
-        .floating-shape {
-            position: absolute;
-            border: 1px solid rgba(239, 68, 68, 0.25);
-            border-radius: 9999px;
-            opacity: 0.7;
-            filter: drop-shadow(0 0 20px rgba(239, 68, 68, 0.25));
-            animation: float 8s ease-in-out infinite;
-            pointer-events: none;
-        }
-        .floating-shape:nth-child(2) {
-            animation-delay: -2s;
-        }
-        .floating-shape:nth-child(3) {
-            animation-delay: -4s;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0) translateX(0); }
-            50% { transform: translateY(-15px) translateX(10px); }
-        }
-        .now-playing-card {
-            position: relative;
-            backdrop-filter: blur(12px);
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 1.5rem;
-            padding: 1.25rem;
-            box-shadow: 0 20px 40px -25px rgba(239, 68, 68, 0.6);
-        }
-        .now-playing-wave {
-            position: relative;
-            display: inline-flex;
-            gap: 4px;
-            align-items: flex-end;
-        }
-        .now-playing-wave span {
-            width: 4px;
-            height: 10px;
-            border-radius: 9999px;
-            background: linear-gradient(to top, rgba(239, 68, 68, 0.9), rgba(239, 68, 68, 0.4));
-            animation: wave 1s infinite ease-in-out;
-        }
-        .now-playing-wave span:nth-child(2) { animation-delay: -0.2s; height: 16px; }
-        .now-playing-wave span:nth-child(3) { animation-delay: -0.4s; height: 12px; }
-        .now-playing-wave span:nth-child(4) { animation-delay: -0.6s; height: 18px; }
-        .now-playing-wave span:nth-child(5) { animation-delay: -0.8s; height: 14px; }
-        @keyframes wave {
-            0%, 100% { transform: scaleY(0.7); }
-            50% { transform: scaleY(1.4); }
-        }
     </style>
 </head>
 <body class="bg-black text-white font-sans antialiased">
@@ -176,62 +101,39 @@
 
         <!-- Hero Section -->
         <main class="text-center min-h-[60vh] lg:min-h-[70vh] flex flex-col items-center justify-center relative py-8 lg:py-0">
-            <div class="max-w-6xl mx-auto px-4 hero-aurora rounded-3xl border border-white/5 bg-gradient-to-br from-white/5 via-transparent to-white/5">
-                <span class="floating-shape hidden md:block w-40 h-40 -top-10 -left-6"></span>
-                <span class="floating-shape hidden md:block w-24 h-24 top-16 -right-4"></span>
-                <span class="floating-shape hidden lg:block w-32 h-32 bottom-10 left-1/2 -translate-x-1/2"></span>
-                <div class="relative z-10 px-4 sm:px-10 py-10 lg:py-16">
-                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white max-w-5xl mx-auto leading-tight mb-6 lg:mb-8">
+            <div class="max-w-6xl mx-auto px-4">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white max-w-5xl mx-auto leading-tight mb-6 lg:mb-8">
                     Your Premier Source for 
                     <span class="gradient-text">News, Music & Community</span>
-                    </h1>
-                    <p class="text-lg sm:text-xl text-zinc-300 max-w-3xl mx-auto mb-8 lg:mb-12 leading-relaxed px-4">
+                </h1>
+                <p class="text-lg sm:text-xl text-zinc-300 max-w-3xl mx-auto mb-8 lg:mb-12 leading-relaxed px-4">
                     RecordFM 97.7 delivers quality content, breaking news, and the best music to keep you informed and entertained around the clock.
-                    </p>
-                    <!-- Action Buttons -->
-                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 lg:gap-6 px-4">
-                        <a href="#" class="group flex items-center justify-center gap-3 bg-gradient-to-r from-red-600 to-red-700 text-white px-6 sm:px-8 lg:px-10 py-3 sm:py-4 rounded-2xl font-bold text-base sm:text-lg hover:from-red-700 hover:to-red-800 transition-all duration-300 professional-shadow hover-lift w-full sm:w-auto">
+                </p>
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 lg:gap-6 px-4">
+                    <a href="#" class="group flex items-center justify-center gap-3 bg-gradient-to-r from-red-600 to-red-700 text-white px-6 sm:px-8 lg:px-10 py-3 sm:py-4 rounded-2xl font-bold text-base sm:text-lg hover:from-red-700 hover:to-red-800 transition-all duration-300 professional-shadow hover-lift w-full sm:w-auto">
                         <i class="fas fa-play text-lg sm:text-xl group-hover:scale-110 transition-transform"></i>
                         Listen Live
-                        </a>
-                        <a href="#" class="group flex items-center justify-center gap-3 border-2 border-red-500 text-red-500 px-6 sm:px-8 lg:px-10 py-3 sm:py-4 rounded-2xl font-bold text-base sm:text-lg hover:bg-red-600 hover:text-white hover:border-red-600 transition-all duration-300 hover-lift w-full sm:w-auto">
+                    </a>
+                    <a href="#" class="group flex items-center justify-center gap-3 border-2 border-red-500 text-red-500 px-6 sm:px-8 lg:px-10 py-3 sm:py-4 rounded-2xl font-bold text-base sm:text-lg hover:bg-red-600 hover:text-white hover:border-red-600 transition-all duration-300 hover-lift w-full sm:w-auto">
                         <i class="fas fa-video text-lg sm:text-xl group-hover:scale-110 transition-transform"></i>
                         Watch Studio
-                        </a>
-                    </div>
-
-                    <!-- Now Playing Card -->
-                    <div class="now-playing-card mt-10 max-w-lg mx-auto text-left text-white/90">
-                        <div class="flex items-center justify-between mb-4">
-                            <div>
-                                <p class="text-xs uppercase tracking-[0.3em] text-red-400 mb-2">Now Playing</p>
-                                <h3 class="text-lg font-semibold text-white">Sunrise Stories</h3>
-                                <p class="text-sm text-zinc-300">Hosted by Sarah Johnson • Weekday mornings</p>
-                            </div>
-                            <div class="now-playing-wave">
-                                <span></span><span></span><span></span><span></span><span></span>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-3 text-sm text-zinc-300">
-                            <i class="fas fa-clock text-red-400"></i>
-                            <span>Up next: Afternoon Talk at 2:00 PM</span>
-                        </div>
-                    </div>
-
-                    <!-- Stats -->
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8 mt-12 lg:mt-16 pt-8 lg:pt-12 border-t border-gray-800">
-                        <div class="text-center">
+                    </a>
+                </div>
+                
+                <!-- Stats -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8 mt-12 lg:mt-16 pt-8 lg:pt-12 border-t border-gray-800">
+                    <div class="text-center">
                         <div class="text-2xl sm:text-3xl font-bold text-white mb-2">50K+</div>
                         <div class="text-sm sm:text-base text-zinc-400">Daily Listeners</div>
-                        </div>
-                        <div class="text-center">
+                    </div>
+                    <div class="text-center">
                         <div class="text-2xl sm:text-3xl font-bold text-white mb-2">24/7</div>
                         <div class="text-sm sm:text-base text-zinc-400">Live Broadcasting</div>
-                        </div>
-                        <div class="text-center">
+                    </div>
+                    <div class="text-center">
                         <div class="text-2xl sm:text-3xl font-bold text-white mb-2">15+</div>
                         <div class="text-sm sm:text-base text-zinc-400">Years Experience</div>
-                        </div>
                     </div>
                 </div>
             </div>

@@ -34,60 +34,6 @@
         .hover-lift:hover {
             transform: translateY(-2px);
         }
-        .hero-aurora {
-            position: relative;
-            overflow: hidden;
-        }
-        .hero-aurora::before,
-        .hero-aurora::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at 15% 20%, rgba(239, 68, 68, 0.25), transparent 55%),
-                        radial-gradient(circle at 85% 25%, rgba(244, 114, 182, 0.12), transparent 60%),
-                        radial-gradient(circle at 50% 90%, rgba(59, 130, 246, 0.15), transparent 65%);
-            opacity: 0.7;
-            animation: aurora 12s infinite alternate ease-in-out;
-            pointer-events: none;
-        }
-        .hero-aurora::after {
-            animation-direction: alternate-reverse;
-            filter: blur(40px);
-            opacity: 0.5;
-        }
-        @keyframes aurora {
-            0% { transform: translateY(-8%) scale(1); }
-            50% { transform: translateY(8%) scale(1.06); }
-            100% { transform: translateY(-5%) scale(1.02); }
-        }
-        .floating-shape {
-            position: absolute;
-            border: 1px solid rgba(239, 68, 68, 0.25);
-            border-radius: 9999px;
-            opacity: 0.7;
-            filter: drop-shadow(0 0 20px rgba(239, 68, 68, 0.25));
-            animation: float 8s ease-in-out infinite;
-            pointer-events: none;
-        }
-        .floating-shape:nth-child(2) { animation-delay: -2s; }
-        .floating-shape:nth-child(3) { animation-delay: -4s; }
-        @keyframes float {
-            0%, 100% { transform: translateY(0) translateX(0); }
-            50% { transform: translateY(-15px) translateX(10px); }
-        }
-        .section-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            border-radius: 9999px;
-            background: rgba(239, 68, 68, 0.1);
-            border: 1px solid rgba(239, 68, 68, 0.25);
-            color: rgba(248, 250, 252, 0.9);
-            font-size: 0.85rem;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }
     </style>
 </head>
 <body class="bg-black text-white font-sans antialiased">
@@ -150,17 +96,9 @@
         <main class="py-8 lg:py-16">
             <div class="max-w-6xl mx-auto px-4">
                 <!-- Page Header -->
-                <div class="hero-aurora rounded-3xl border border-white/5 bg-gradient-to-br from-white/5 via-transparent to-white/5 overflow-hidden mb-12 lg:mb-16">
-                    <span class="floating-shape hidden md:block w-32 h-32 -top-10 -left-6"></span>
-                    <span class="floating-shape hidden md:block w-24 h-24 top-16 -right-4"></span>
-                    <div class="relative z-10 px-6 sm:px-12 py-10 lg:py-14 text-center">
-                        <div class="section-pill mx-auto mb-6">
-                            <i class="fas fa-bolt text-red-400"></i>
-                            Breaking Updates
-                        </div>
-                        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-4 lg:mb-6">Latest News</h1>
-                        <p class="text-lg lg:text-xl text-zinc-300 max-w-3xl mx-auto">Stay informed with breaking news, local updates, and community stories from RecordFM 97.7</p>
-                    </div>
+                <div class="text-center mb-12 lg:mb-16">
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-4 lg:mb-6">Latest News</h1>
+                    <p class="text-lg lg:text-xl text-zinc-300 max-w-3xl mx-auto">Stay informed with breaking news, local updates, and community stories from RecordFM 97.7</p>
                 </div>
 
                 <!-- Featured News -->

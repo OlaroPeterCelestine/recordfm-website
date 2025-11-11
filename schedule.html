@@ -34,8 +34,45 @@
         .hover-lift:hover {
             transform: translateY(-2px);
         }
+        .floating-shape:nth-child(3) { animation-delay: -4s; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); }
+            50% { transform: translateY(-15px) translateX(10px); }
+        }
+        .section-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.25);
+            color: rgba(248, 250, 252, 0.9);
+            font-size: 0.85rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
         .current-time {
             background: linear-gradient(135deg, #ef4444, #dc2626);
+        }
+        .schedule-tab {
+            border-radius: 9999px;
+            padding: 0.5rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: rgba(229, 231, 235, 0.8);
+            font-weight: 600;
+            font-size: 0.875rem;
+            letter-spacing: 0.02em;
+            transition: all 0.2s ease;
+        }
+        .schedule-tab:hover {
+            color: #ffffff;
+        }
+        .schedule-tab.active {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            border-color: rgba(239, 68, 68, 0.6);
+            color: #ffffff;
+            box-shadow: 0 12px 35px -20px rgba(239, 68, 68, 0.9);
         }
     </style>
 </head>
@@ -226,141 +263,17 @@
                 <!-- Weekly Overview -->
                 <div class="mb-16">
                     <h2 class="text-3xl font-bold text-white mb-8">Weekly Overview</h2>
-                    <div class="bg-zinc-900 rounded-2xl p-8 professional-shadow">
-                        <div class="grid grid-cols-1 md:grid-cols-7 gap-4">
-                            <!-- Monday -->
-                            <div class="text-center">
-                                <h3 class="text-lg font-bold text-white mb-4">Monday</h3>
-                                <div class="space-y-2">
-                                    <div class="bg-zinc-800 rounded-lg p-2">
-                                        <div class="text-sm font-semibold text-red-500">6:00 AM</div>
-                                        <div class="text-xs text-zinc-400">Morning Drive</div>
-                                    </div>
-                                    <div class="bg-zinc-800 rounded-lg p-2">
-                                        <div class="text-sm font-semibold text-red-500">12:00 PM</div>
-                                        <div class="text-xs text-zinc-400">Sports Hour</div>
-                                    </div>
-                                    <div class="bg-zinc-800 rounded-lg p-2">
-                                        <div class="text-sm font-semibold text-red-500">2:00 PM</div>
-                                        <div class="text-xs text-zinc-400">Afternoon Talk</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Tuesday -->
-                            <div class="text-center">
-                                <h3 class="text-lg font-bold text-white mb-4">Tuesday</h3>
-                                <div class="space-y-2">
-                                    <div class="bg-zinc-800 rounded-lg p-2">
-                                        <div class="text-sm font-semibold text-red-500">6:00 AM</div>
-                                        <div class="text-xs text-zinc-400">Morning Drive</div>
-                                    </div>
-                                    <div class="bg-zinc-800 rounded-lg p-2">
-                                        <div class="text-sm font-semibold text-red-500">12:00 PM</div>
-                                        <div class="text-xs text-zinc-400">Sports Hour</div>
-                                    </div>
-                                    <div class="bg-zinc-800 rounded-lg p-2">
-                                        <div class="text-sm font-semibold text-red-500">2:00 PM</div>
-                                        <div class="text-xs text-zinc-400">Afternoon Talk</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Wednesday -->
-                            <div class="text-center">
-                                <h3 class="text-lg font-bold text-white mb-4">Wednesday</h3>
-                                <div class="space-y-2">
-                                    <div class="bg-zinc-800 rounded-lg p-2">
-                                        <div class="text-sm font-semibold text-red-500">6:00 AM</div>
-                                        <div class="text-xs text-zinc-400">Morning Drive</div>
-                                    </div>
-                                    <div class="bg-zinc-800 rounded-lg p-2">
-                                        <div class="text-sm font-semibold text-red-500">12:00 PM</div>
-                                        <div class="text-xs text-zinc-400">Sports Hour</div>
-                                    </div>
-                                    <div class="bg-zinc-800 rounded-lg p-2">
-                                        <div class="text-sm font-semibold text-red-500">2:00 PM</div>
-                                        <div class="text-xs text-zinc-400">Afternoon Talk</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Thursday -->
-                            <div class="text-center">
-                                <h3 class="text-lg font-bold text-white mb-4">Thursday</h3>
-                                <div class="space-y-2">
-                                    <div class="bg-zinc-800 rounded-lg p-2">
-                                        <div class="text-sm font-semibold text-red-500">6:00 AM</div>
-                                        <div class="text-xs text-zinc-400">Morning Drive</div>
-                                    </div>
-                                    <div class="bg-zinc-800 rounded-lg p-2">
-                                        <div class="text-sm font-semibold text-red-500">12:00 PM</div>
-                                        <div class="text-xs text-zinc-400">Sports Hour</div>
-                                    </div>
-                                    <div class="bg-zinc-800 rounded-lg p-2">
-                                        <div class="text-sm font-semibold text-red-500">2:00 PM</div>
-                                        <div class="text-xs text-zinc-400">Afternoon Talk</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Friday -->
-                            <div class="text-center">
-                                <h3 class="text-lg font-bold text-white mb-4">Friday</h3>
-                                <div class="space-y-2">
-                                    <div class="bg-zinc-800 rounded-lg p-2">
-                                        <div class="text-sm font-semibold text-red-500">6:00 AM</div>
-                                        <div class="text-xs text-zinc-400">Morning Drive</div>
-                                    </div>
-                                    <div class="bg-zinc-800 rounded-lg p-2">
-                                        <div class="text-sm font-semibold text-red-500">12:00 PM</div>
-                                        <div class="text-xs text-zinc-400">Sports Hour</div>
-                                    </div>
-                                    <div class="bg-zinc-800 rounded-lg p-2">
-                                        <div class="text-sm font-semibold text-red-500">2:00 PM</div>
-                                        <div class="text-xs text-zinc-400">Afternoon Talk</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Saturday -->
-                            <div class="text-center">
-                                <h3 class="text-lg font-bold text-white mb-4">Saturday</h3>
-                                <div class="space-y-2">
-                                    <div class="bg-zinc-800 rounded-lg p-2">
-                                        <div class="text-sm font-semibold text-red-500">10:00 AM</div>
-                                        <div class="text-xs text-zinc-400">Weekend Special</div>
-                                    </div>
-                                    <div class="bg-zinc-800 rounded-lg p-2">
-                                        <div class="text-sm font-semibold text-red-500">2:00 PM</div>
-                                        <div class="text-xs text-zinc-400">Community Focus</div>
-                                    </div>
-                                    <div class="bg-zinc-800 rounded-lg p-2">
-                                        <div class="text-sm font-semibold text-red-500">6:00 PM</div>
-                                        <div class="text-xs text-zinc-400">Evening News</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Sunday -->
-                            <div class="text-center">
-                                <h3 class="text-lg font-bold text-white mb-4">Sunday</h3>
-                                <div class="space-y-2">
-                                    <div class="bg-zinc-800 rounded-lg p-2">
-                                        <div class="text-sm font-semibold text-red-500">10:00 AM</div>
-                                        <div class="text-xs text-zinc-400">Weekend Special</div>
-                                    </div>
-                                    <div class="bg-zinc-800 rounded-lg p-2">
-                                        <div class="text-sm font-semibold text-red-500">2:00 PM</div>
-                                        <div class="text-xs text-zinc-400">Community Focus</div>
-                                    </div>
-                                    <div class="bg-zinc-800 rounded-lg p-2">
-                                        <div class="text-sm font-semibold text-red-500">6:00 PM</div>
-                                        <div class="text-xs text-zinc-400">Evening News</div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="bg-zinc-900 rounded-2xl p-6 lg:p-8 professional-shadow">
+                        <div id="schedule-tabs" class="flex flex-wrap gap-3">
+                            <button class="schedule-tab active" data-day="Monday">Monday</button>
+                            <button class="schedule-tab" data-day="Tuesday">Tuesday</button>
+                            <button class="schedule-tab" data-day="Wednesday">Wednesday</button>
+                            <button class="schedule-tab" data-day="Thursday">Thursday</button>
+                            <button class="schedule-tab" data-day="Friday">Friday</button>
+                            <button class="schedule-tab" data-day="Saturday">Saturday</button>
+                            <button class="schedule-tab" data-day="Sunday">Sunday</button>
                         </div>
+                        <div id="schedule-content" class="mt-6 space-y-4"></div>
                     </div>
                 </div>
             </div>
@@ -497,6 +410,111 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const scheduleData = {
+            Monday: [
+                { time: '6:00 AM', title: 'Morning Drive', host: 'Sarah Johnson', desc: 'Start your day with news, weather, and community updates.' },
+                { time: '12:00 PM', title: 'Sports Hour', host: 'Sports Team', desc: 'Local and national sports coverage with expert analysis.' },
+                { time: '2:00 PM', title: 'Afternoon Talk', host: 'Mike Rodriguez', desc: 'Engaging conversations about current events and community issues.' }
+            ],
+            Tuesday: [
+                { time: '6:00 AM', title: 'Morning Drive', host: 'Sarah Johnson', desc: 'Start your day with news, weather, and community updates.' },
+                { time: '12:00 PM', title: 'Sports Hour', host: 'Sports Team', desc: 'Local and national sports coverage with expert analysis.' },
+                { time: '2:00 PM', title: 'Afternoon Talk', host: 'Mike Rodriguez', desc: 'Engaging conversations about current events and community issues.' }
+            ],
+            Wednesday: [
+                { time: '6:00 AM', title: 'Morning Drive', host: 'Sarah Johnson', desc: 'Start your day with news, weather, and community updates.' },
+                { time: '12:00 PM', title: 'Sports Hour', host: 'Sports Team', desc: 'Local and national sports coverage with expert analysis.' },
+                { time: '2:00 PM', title: 'Afternoon Talk', host: 'Mike Rodriguez', desc: 'Engaging conversations about current events and community issues.' }
+            ],
+            Thursday: [
+                { time: '6:00 AM', title: 'Morning Drive', host: 'Sarah Johnson', desc: 'Start your day with news, weather, and community updates.' },
+                { time: '12:00 PM', title: 'Sports Hour', host: 'Sports Team', desc: 'Local and national sports coverage with expert analysis.' },
+                { time: '2:00 PM', title: 'Afternoon Talk', host: 'Mike Rodriguez', desc: 'Engaging conversations about current events and community issues.' }
+            ],
+            Friday: [
+                { time: '6:00 AM', title: 'Morning Drive', host: 'Sarah Johnson', desc: 'Start your day with news, weather, and community updates.' },
+                { time: '12:00 PM', title: 'Sports Hour', host: 'Sports Team', desc: 'Local and national sports coverage with expert analysis.' },
+                { time: '2:00 PM', title: 'Afternoon Talk', host: 'Mike Rodriguez', desc: 'Engaging conversations about current events and community issues.' }
+            ],
+            Saturday: [
+                { time: '10:00 AM', title: 'Weekend Special', host: 'Various Hosts', desc: 'Special features, documentaries, and listener spotlights.' },
+                { time: '2:00 PM', title: 'Community Focus', host: 'Local Voices', desc: 'Stories and discussions from the heart of our community.' },
+                { time: '6:00 PM', title: 'Evening News', host: 'Emma Davis', desc: 'Comprehensive coverage of the day’s most important stories.' }
+            ],
+            Sunday: [
+                { time: '10:00 AM', title: 'Weekend Special', host: 'Various Hosts', desc: 'Special features, documentaries, and listener spotlights.' },
+                { time: '2:00 PM', title: 'Community Focus', host: 'Local Voices', desc: 'Stories and discussions from the heart of our community.' },
+                { time: '6:00 PM', title: 'Evening News', host: 'Emma Davis', desc: 'Comprehensive coverage of the day’s most important stories.' }
+            ]
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            const tabsContainer = document.getElementById('schedule-tabs');
+            const scheduleContent = document.getElementById('schedule-content');
+
+            if (tabsContainer && scheduleContent) {
+                const tabButtons = tabsContainer.querySelectorAll('button[data-day]');
+
+                const setActiveTab = (day) => {
+                    tabButtons.forEach((btn) => {
+                        if (btn.dataset.day === day) {
+                            btn.classList.add('active');
+                        } else {
+                            btn.classList.remove('active');
+                        }
+                    });
+                };
+
+                const renderDay = (day) => {
+                    const entries = scheduleData[day] || [];
+                    scheduleContent.innerHTML = '';
+
+                    if (!entries.length) {
+                        scheduleContent.innerHTML = '<p class="text-zinc-400 text-sm">No programming listed for this day yet.</p>';
+                        return;
+                    }
+
+                    entries.forEach((item) => {
+                        const wrapper = document.createElement('div');
+                        wrapper.className = 'flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-zinc-800/80 rounded-xl px-4 py-3 border border-white/5';
+
+                        wrapper.innerHTML = `
+                            <div>
+                                <p class="text-sm font-semibold text-red-500 mb-1">${item.time}</p>
+                                <p class="text-white text-base font-semibold">${item.title}</p>
+                                ${item.host ? `<p class="text-xs text-zinc-400">${item.host}</p>` : ''}
+                                ${item.desc ? `<p class="text-xs text-zinc-500 mt-1">${item.desc}</p>` : ''}
+                            </div>
+                        `;
+
+                        scheduleContent.appendChild(wrapper);
+                    });
+                };
+
+                tabButtons.forEach((btn) => {
+                    btn.addEventListener('click', () => {
+                        const day = btn.dataset.day;
+                        setActiveTab(day);
+                        renderDay(day);
+                    });
+                });
+
+                setActiveTab('Monday');
+                renderDay('Monday');
+            }
+        });
+    </script>
 
 </body>
 </html>

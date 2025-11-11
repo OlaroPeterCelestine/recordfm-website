@@ -2,17 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  color-scheme: dark;
-}
-
 html,
 body {
   padding: 0;
   margin: 0;
-  background-color: #050505;
-  color: #f4f4f5;
-  min-height: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #0f172a;
 }
 
 a {
@@ -20,100 +16,16 @@ a {
   text-decoration: none;
 }
 
-.gradient-text {
-  background: linear-gradient(135deg, #ef4444, #dc2626);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
 }
 
-.professional-shadow {
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.15);
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
-.hover-lift {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hover-lift:hover {
-  transform: translateY(-2px);
-}
-
-.hero-aurora {
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-aurora::before,
-.hero-aurora::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 20% 20%, rgba(239, 68, 68, 0.25), transparent 55%),
-              radial-gradient(circle at 80% 25%, rgba(244, 114, 182, 0.12), transparent 60%),
-              radial-gradient(circle at 50% 85%, rgba(59, 130, 246, 0.15), transparent 65%);
-  pointer-events: none;
-  opacity: 0.75;
-  animation: aurora 12s ease-in-out infinite;
-}
-
-.hero-aurora::after {
-  filter: blur(45px);
-  opacity: 0.55;
-  animation-direction: alternate-reverse;
-}
-
-.floating-shape {
-  position: absolute;
-  border: 1px solid rgba(239, 68, 68, 0.35);
-  border-radius: 9999px;
-  opacity: 0.7;
-  filter: drop-shadow(0 0 25px rgba(239, 68, 68, 0.25));
-  pointer-events: none;
-  animation: float 8s ease-in-out infinite;
-}
-
-.now-playing-wave {
-  display: inline-flex;
-  align-items: flex-end;
-  gap: 4px;
-}
-
-.now-playing-wave span {
-  width: 4px;
-  border-radius: 9999px;
-  background: linear-gradient(to top, rgba(239, 68, 68, 0.95), rgba(239, 68, 68, 0.4));
-  animation: wave 1s ease-in-out infinite;
-}
-
-.now-playing-wave span:nth-child(2) { animation-delay: -0.2s; height: 18px; }
-.now-playing-wave span:nth-child(3) { animation-delay: -0.4s; height: 14px; }
-.now-playing-wave span:nth-child(4) { animation-delay: -0.6s; height: 20px; }
-.now-playing-wave span:nth-child(5) { animation-delay: -0.8s; height: 16px; }
-
-.bottom-sheet-backdrop {
-  background: rgba(2, 6, 23, 0.75);
-  backdrop-filter: blur(6px);
-}
-
-.bottom-sheet {
-  border-top-left-radius: 1.5rem;
-  border-top-right-radius: 1.5rem;
-  box-shadow: 0 -20px 40px -25px rgba(0, 0, 0, 0.45);
-}
-
-@keyframes aurora {
-  0% { transform: translateY(-10%) scale(1); }
-  50% { transform: translateY(10%) scale(1.05); }
-  100% { transform: translateY(-5%) scale(1.02); }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0) translateX(0); }
-  50% { transform: translateY(-15px) translateX(10px); }
-}
-
-@keyframes wave {
-  0%, 100% { transform: scaleY(0.7); }
-  50% { transform: scaleY(1.4); }
+p {
+  line-height: 1.6;
 }
